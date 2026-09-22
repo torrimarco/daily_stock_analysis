@@ -2396,7 +2396,7 @@ class GeminiAnalyzer:
 
 - Keep all JSON keys unchanged.
 - `decision_type` must remain `buy|hold|sell`.
-- All human-readable JSON values must be written in English.
+- Write narrative explanations, summaries, dashboard text and checklist items in Italian. Keep JSON keys and all structured categorical values such as decision_type, operation_advice, trend_prediction, confidence_level and signal identifiers unchanged in English. Preserve company names, tickers and numbers.
 - Use the common English company name when you are confident; otherwise keep the original listed company name instead of inventing one.
 - This includes `stock_name`, `trend_prediction`, `operation_advice`, `confidence_level`, nested dashboard text, checklist items, and all narrative summaries.
 """
@@ -4473,10 +4473,10 @@ class GeminiAnalyzer:
 ### Output language requirements (highest priority)
 - Keep every JSON key exactly as defined above; do not translate keys.
 - `decision_type` must remain `buy`, `hold`, or `sell`.
-- All human-readable JSON values must be in English.
+- Write narrative explanations, summaries, dashboard text and checklist items in Italian. Keep JSON keys and all structured categorical values such as decision_type, operation_advice, trend_prediction, confidence_level and signal identifiers unchanged in English. Preserve company names, tickers and numbers.
 - This includes `stock_name`, `trend_prediction`, `operation_advice`, `confidence_level`, all nested dashboard text, checklist items, and every summary field.
 - Use the common English company name when you are confident. If not, keep the listed company name rather than inventing one.
-- When data is missing, explain it in English instead of Chinese.
+- When data is missing, explain it in Italian.
 """
         elif report_language == "ko":
             prompt += """
